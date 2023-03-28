@@ -37,7 +37,9 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = ClusterMetadata.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class ClusterMetadata extends CommonMetadata {
+public final class ClusterMetadata extends CommonMetadata {
+
+    private static final long serialVersionUID = 1;
 
     @NotNull(message = "A cluster status is required")
     private final ClusterStatus status;

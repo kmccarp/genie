@@ -29,7 +29,9 @@ import java.util.Optional;
  * @author tgianos
  * @since 4.3.0
  */
-public class ComputeResources implements Serializable {
+public final class ComputeResources implements Serializable {
+
+    private static final long serialVersionUID = 1;
 
     @Min(value = 1, message = "Must have at least one CPU")
     private final Integer cpu;

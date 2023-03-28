@@ -69,7 +69,7 @@ class AwsAutoConfigurationTest {
     @Test
     void testExpectedContext() {
         this.contextRunner.run(
-            (context) -> {
+            context -> {
                 Assertions.assertThat(context).hasSingleBean(AwsRegionProvider.class);
                 Assertions.assertThat(context).hasSingleBean(S3ClientFactory.class);
                 Assertions.assertThat(context).hasSingleBean(AwsS3ResourceLoaderProperties.class);

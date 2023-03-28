@@ -57,7 +57,7 @@ import org.springframework.web.client.RestTemplate;
  */
 class LeaderAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

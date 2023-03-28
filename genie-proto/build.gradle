@@ -41,7 +41,7 @@ protobuf {
         // Download the protoc compiler
         // This particular protobuf dependency isn't in the BOM for some reason
         // workaround for no native M1 support https://github.com/grpc/grpc-java/issues/7690#issuecomment-760332746
-        if (osdetector.os == "osx") {
+        if ("osx".equals(osdetector.os)) {
             artifact = "com.google.protobuf:protoc:${protobuf_version}:osx-x86_64"
         } else {
             artifact = "com.google.protobuf:protoc:${protobuf_version}"
@@ -53,7 +53,7 @@ protobuf {
     plugins {
         grpc {
             // Download the grpc compiler
-            if (osdetector.os == "osx") {
+            if ("osx".equals(osdetector.os)) {
                 artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}:osx-x86_64"
             } else {
                 artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}"

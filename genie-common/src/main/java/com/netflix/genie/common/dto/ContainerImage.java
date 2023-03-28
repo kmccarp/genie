@@ -34,7 +34,9 @@ import java.util.Optional;
  * @since 4.3.0
  */
 @JsonDeserialize(builder = ContainerImage.Builder.class)
-public class ContainerImage implements Serializable {
+public final class ContainerImage implements Serializable {
+
+    private static final long serialVersionUID = 1;
 
     private final String name;
     private final String tag;

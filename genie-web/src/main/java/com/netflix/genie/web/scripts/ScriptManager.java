@@ -122,7 +122,7 @@ public class ScriptManager {
         final AtomicBoolean newKey = new AtomicBoolean(false);
         final AtomicReference<CompiledScript> compiledScriptReference = this.scriptsMap.computeIfAbsent(
             scriptUri,
-            (key) -> {
+            key -> {
                 newKey.set(true);
                 return new AtomicReference<>();
             }

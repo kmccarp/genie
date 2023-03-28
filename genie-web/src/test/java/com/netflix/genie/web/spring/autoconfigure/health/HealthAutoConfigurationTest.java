@@ -35,7 +35,7 @@ import org.springframework.context.annotation.Bean;
  */
 class HealthAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(
