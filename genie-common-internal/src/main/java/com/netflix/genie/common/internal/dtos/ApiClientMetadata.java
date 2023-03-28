@@ -35,6 +35,7 @@ import java.util.Optional;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @SuppressWarnings("checkstyle:finalclass")
 public class ApiClientMetadata extends ClientMetadata {
+    private static final long serialVersionUID = 1;
     private final String userAgent;
 
     /**

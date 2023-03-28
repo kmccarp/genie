@@ -54,7 +54,7 @@ import org.springframework.scheduling.TaskScheduler;
  */
 class AgentServicesAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

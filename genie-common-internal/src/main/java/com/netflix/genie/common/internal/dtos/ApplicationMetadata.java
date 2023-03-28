@@ -41,7 +41,9 @@ import java.util.Optional;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = ApplicationMetadata.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class ApplicationMetadata extends CommonMetadata {
+public final class ApplicationMetadata extends CommonMetadata {
+
+    private static final long serialVersionUID = 1;
 
     @Size(max = 255, message = "Max length of an application type is 255 characters")
     private final String type;

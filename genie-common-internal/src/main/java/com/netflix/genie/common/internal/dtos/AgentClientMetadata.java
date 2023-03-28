@@ -36,6 +36,8 @@ import java.util.Optional;
 @SuppressWarnings("checkstyle:finalclass")
 public class AgentClientMetadata extends ClientMetadata {
 
+    private static final long serialVersionUID = 1;
+
     private final String version;
     private final Integer pid;
 

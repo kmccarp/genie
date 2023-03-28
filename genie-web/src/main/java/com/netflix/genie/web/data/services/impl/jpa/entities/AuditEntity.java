@@ -43,6 +43,8 @@ import java.time.Instant;
 @MappedSuperclass
 public class AuditEntity extends IdEntity implements AuditProjection {
 
+    private static final long serialVersionUID = 1;
+
     @Basic(optional = false)
     @Column(name = "created", nullable = false, updatable = false)
     private Instant created = Instant.now();

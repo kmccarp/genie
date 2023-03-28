@@ -42,7 +42,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
  */
 class NodeAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(
