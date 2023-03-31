@@ -46,6 +46,8 @@ import java.util.UUID;
 )
 public class UniqueIdEntity extends AuditEntity {
 
+    private static final long serialVersionUID = 1;
+
     @Basic(optional = false)
     @Column(name = "unique_id", nullable = false, unique = true, updatable = false)
     @NotBlank(message = "A unique identifier is missing and is required.")

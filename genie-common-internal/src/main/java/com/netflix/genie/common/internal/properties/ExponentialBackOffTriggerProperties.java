@@ -43,5 +43,5 @@ public class ExponentialBackOffTriggerProperties {
         ExponentialBackOffTrigger.DelayType.FROM_PREVIOUS_EXECUTION_COMPLETION;
     private Duration minDelay = Duration.ofMillis(100);
     private Duration maxDelay = Duration.ofSeconds(3);
-    private float factor = 1.2f;
+    private float factor = 1.2F;
 }

@@ -54,7 +54,7 @@ class AgentInspectorsAutoConfigurationTest {
                 "genie.agent.filter.enabled=true"
             )
             .run(
-                (context) -> {
+                context -> {
                     Assertions.assertThat(context).hasSingleBean(AgentFilterProperties.class);
                     Assertions.assertThat(context).getBeans(AgentMetadataInspector.class).hasSize(4);
                     Assertions.assertThat(context).hasSingleBean(WhitelistedVersionAgentMetadataInspector.class);
@@ -75,7 +75,7 @@ class AgentInspectorsAutoConfigurationTest {
                 "genie.agent.filter.enabled=nope"
             )
             .run(
-                (context) -> {
+                context -> {
                     Assertions.assertThat(context).doesNotHaveBean(AgentFilterProperties.class);
                     Assertions.assertThat(context).doesNotHaveBean(AgentMetadataInspector.class);
                 }
@@ -92,7 +92,7 @@ class AgentInspectorsAutoConfigurationTest {
                 "genie.some.other.property=true"
             )
             .run(
-                (context) -> {
+                context -> {
                     Assertions.assertThat(context).doesNotHaveBean(AgentFilterProperties.class);
                     Assertions.assertThat(context).doesNotHaveBean(AgentMetadataInspector.class);
                 }

@@ -30,7 +30,7 @@ import java.io.IOException;
  */
 @Slf4j
 @SuppressWarnings("FinalClass")
-public class GRpcServerUtils {
+public final class GRpcServerUtils {
 
     /**
      * Utility class.

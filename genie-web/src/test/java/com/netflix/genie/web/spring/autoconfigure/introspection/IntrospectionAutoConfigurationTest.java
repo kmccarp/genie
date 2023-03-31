@@ -39,7 +39,7 @@ class IntrospectionAutoConfigurationTest {
 
     private static final int EXPECTED_SERVER_PORT = 2482;
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

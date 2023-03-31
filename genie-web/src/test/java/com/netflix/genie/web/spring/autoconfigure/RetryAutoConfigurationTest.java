@@ -31,7 +31,7 @@ import org.springframework.retry.annotation.RetryConfiguration;
  */
 class RetryAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(
