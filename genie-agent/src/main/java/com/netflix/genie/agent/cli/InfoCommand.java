@@ -112,15 +112,10 @@ class InfoCommand implements AgentCommand {
                 final BeanDefinition beanDefinition = applicationContext.getBeanFactory().getBeanDefinition(beanName);
                 final String beanClass = beanDefinition.getBeanClassName();
 
-                final String description = new StringBuilder()
-                    .append(beanDefinition.isLazyInit() ? "lazy" : "eager")
-                    .append(beanDefinition.isPrototype() ? ", prototype" : "")
-                    .append(beanDefinition.isSingleton() ? ", singleton" : "")
-                    .toString();
+                final String description = beanDefinition.isLazyInit() ? "lazy" : "eager" + (beanDefinition.isPrototype() ? ", prototype" : "") + (beanDefinition.isSingleton() ? ", singleton" : "");
 
                 messageBuilder
-                    .append(
-                        String.format(
+                    .append(String.format(
                             "  - %s (%s) [%s]",
                             beanName,
                             beanClass == null ? "?" : beanClass,
@@ -143,8 +138,7 @@ class InfoCommand implements AgentCommand {
 
             for (Map.Entry<String, Object> envEntry : envEntries) {
                 messageBuilder
-                    .append(
-                        String.format(
+                    .append(String.format(
                             "  - %s=%s",
                             envEntry.getKey(),
                             envEntry.getValue()
@@ -165,8 +159,7 @@ class InfoCommand implements AgentCommand {
                 .append(NEWLINE);
             for (Map.Entry<String, Object> property : properties) {
                 messageBuilder
-                    .append(
-                        String.format(
+                    .append(String.format(
                             "  - %s=%s",
                             property.getKey(),
                             property.getValue()
@@ -181,8 +174,7 @@ class InfoCommand implements AgentCommand {
                 .append(NEWLINE);
             for (PropertySource<?> propertySource : propertySources) {
                 messageBuilder
-                    .append(
-                        String.format(
+                    .append(String.format(
                             "  - %s (%s)",
                             propertySource.getName(),
                             propertySource.getClass().getSimpleName()

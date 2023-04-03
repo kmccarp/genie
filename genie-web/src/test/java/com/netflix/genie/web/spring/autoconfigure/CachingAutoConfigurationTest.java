@@ -33,7 +33,7 @@ import org.springframework.cache.caffeine.CaffeineCacheManager;
  */
 class CachingAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

@@ -27,7 +27,7 @@ import com.netflix.genie.agent.execution.statemachine.States;
  * @since 4.0.0
  */
 public class StopFileServiceStage extends StopServiceStage {
-    private AgentFileStreamService agentFileStreamService;
+    private final AgentFileStreamService agentFileStreamService;
 
     /**
      * Constructor.

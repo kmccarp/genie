@@ -41,6 +41,7 @@ import java.util.stream.Collectors;
 @ToString(callSuper = true, doNotUseGetters = true)
 @SuppressWarnings("checkstyle:finalclass")
 public class JobRequest extends CommonRequestImpl implements AgentJobRequest, ApiJobRequest {
+    private static final long serialVersionUID = 1;
     private final ImmutableList<
         @NotBlank(message = "A command argument shouldn't be a blank string")
         @Size(

@@ -152,7 +152,7 @@ class JpaPersistenceServiceImplApplicationsTest {
         Mockito.when(applicationEntity.getCommands()).thenReturn(Sets.newHashSet(commandEntity));
         Assertions
             .assertThatExceptionOfType(PreconditionFailedException.class)
-            .isThrownBy(() -> this.persistenceService.deleteAllApplications());
+            .isThrownBy(this.persistenceService::deleteAllApplications);
     }
 
     @Test

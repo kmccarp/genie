@@ -48,7 +48,7 @@ import org.springframework.core.Ordered;
  */
 class SelectorsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

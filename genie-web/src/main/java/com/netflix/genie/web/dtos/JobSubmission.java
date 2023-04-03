@@ -43,7 +43,7 @@ import java.util.Set;
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)
 @SuppressWarnings("FinalClass")
-public class JobSubmission {
+public final class JobSubmission {
 
     @NotNull
     @Valid

@@ -34,7 +34,7 @@ import org.springframework.context.annotation.Configuration;
  */
 class AgentRpcInterceptorsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

@@ -35,7 +35,7 @@ import java.util.Optional;
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)
 @SuppressWarnings("FinalClass")
-public class ResourceSelectionResult<R> {
+public final class ResourceSelectionResult<R> {
     private final Class<?> selectorClass;
     private final R selectedResource;
     private final String selectionRationale;

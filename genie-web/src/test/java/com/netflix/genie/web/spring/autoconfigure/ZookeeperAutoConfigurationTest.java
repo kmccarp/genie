@@ -38,7 +38,7 @@ import org.springframework.integration.zookeeper.config.LeaderInitiatorFactoryBe
  */
 class ZookeeperAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withConfiguration(
                 AutoConfigurations.of(

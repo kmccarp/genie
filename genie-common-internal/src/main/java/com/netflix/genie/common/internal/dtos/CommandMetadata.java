@@ -37,7 +37,9 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = CommandMetadata.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class CommandMetadata extends CommonMetadata {
+public final class CommandMetadata extends CommonMetadata {
+
+    private static final long serialVersionUID = 1;
 
     @NotNull(message = "A command status is required")
     private final CommandStatus status;
