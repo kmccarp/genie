@@ -33,7 +33,8 @@ import java.util.Objects;
  * @since 4.3.0
  */
 @JsonDeserialize(builder = Runtime.Builder.class)
-public class Runtime implements Serializable {
+public final class Runtime implements Serializable {
+    private static final long serialVersionUID = 1;
     private final RuntimeResources resources;
     private final Map<String, ContainerImage> images;
 

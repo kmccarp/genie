@@ -29,7 +29,7 @@ import org.springframework.integration.zookeeper.leader.LeaderInitiator;
  */
 public class ClusterLeaderServiceCuratorImpl implements ClusterLeaderService {
 
-    private LeaderInitiator leaderInitiator;
+    private final LeaderInitiator leaderInitiator;
 
     /**
      * Constructor.

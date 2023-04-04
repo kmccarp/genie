@@ -48,7 +48,9 @@ import java.util.stream.Collectors;
 @ToString(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = CommandRequest.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class CommandRequest extends CommonRequestImpl {
+public final class CommandRequest extends CommonRequestImpl {
+
+    private static final long serialVersionUID = 1;
 
     @Valid
     private final CommandMetadata metadata;

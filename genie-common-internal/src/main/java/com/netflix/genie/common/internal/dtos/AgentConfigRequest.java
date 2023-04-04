@@ -39,7 +39,7 @@ import java.util.Optional;
 @ToString(doNotUseGetters = true)
 @EqualsAndHashCode(doNotUseGetters = true)
 @SuppressWarnings("checkstyle:finalclass")
-public class AgentConfigRequest implements Serializable {
+public final class AgentConfigRequest implements Serializable {
 
     private static final long serialVersionUID = 8222386837109375937L;
 

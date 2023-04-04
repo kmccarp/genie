@@ -285,7 +285,7 @@ class CommandTest {
     void cantBuildWithoutExecutable() {
         Assertions
             .assertThatIllegalArgumentException()
-            .isThrownBy(() -> new Command.Builder(NAME, USER, VERSION, CommandStatus.ACTIVE).build());
+            .isThrownBy(new Command.Builder(NAME, USER, VERSION, CommandStatus.ACTIVE)::build);
     }
 
     @SuppressWarnings("deprecation")

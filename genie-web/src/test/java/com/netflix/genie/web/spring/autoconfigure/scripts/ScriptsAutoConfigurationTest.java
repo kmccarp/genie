@@ -44,7 +44,7 @@ import org.springframework.scheduling.TaskScheduler;
  */
 class ScriptsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
+    private final ApplicationContextRunner contextRunner =
         new ApplicationContextRunner()
             .withUserConfiguration(MocksConfiguration.class)
             .withConfiguration(

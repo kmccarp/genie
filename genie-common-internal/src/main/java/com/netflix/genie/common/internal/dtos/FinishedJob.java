@@ -41,6 +41,8 @@ import java.util.Optional;
 @SuppressWarnings("checkstyle:finalclass")
 public class FinishedJob extends CommonMetadata {
 
+    private static final long serialVersionUID = 1;
+
     @Getter
     @Size(max = 255, message = "Max length for the ID is 255 characters")
     private final String uniqueId;
