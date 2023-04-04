@@ -51,6 +51,8 @@ import javax.validation.constraints.Size;
 @Table(name = "files")
 public class FileEntity extends AuditEntity {
 
+    private static final long serialVersionUID = 1;
+
     @Basic(optional = false)
     @Column(name = "file", nullable = false, unique = true, updatable = false)
     @NotBlank(message = "Must have a file location associated with this entity")

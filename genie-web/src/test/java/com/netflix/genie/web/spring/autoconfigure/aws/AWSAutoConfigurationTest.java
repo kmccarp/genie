@@ -63,7 +63,7 @@ class AWSAutoConfigurationTest {
     @Test
     void testExpectedContext() {
         this.contextRunner.run(
-            (context) -> {
+            context -> {
                 Assertions.assertThat(context).hasBean(AWSAutoConfiguration.SNS_CLIENT_BEAN_NAME);
                 Assertions.assertThat(context).hasBean("SNSClientRetryPolicy");
                 Assertions.assertThat(context).hasBean("SNSClientConfiguration");
@@ -83,7 +83,7 @@ class AWSAutoConfigurationTest {
             .withPropertyValues(
                 "genie.notifications.sns.enabled=false"
             ).run(
-                (context) -> {
+                context -> {
                     Assertions.assertThat(context).doesNotHaveBean(AWSAutoConfiguration.SNS_CLIENT_BEAN_NAME);
                 }
             );

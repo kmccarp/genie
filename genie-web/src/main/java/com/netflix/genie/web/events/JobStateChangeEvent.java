@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
 @Getter
 @ToString
 public class JobStateChangeEvent extends ApplicationEvent {
+    private static final long serialVersionUID = 1;
     private final String jobId;
     private final JobStatus previousStatus;
     private final JobStatus newStatus;

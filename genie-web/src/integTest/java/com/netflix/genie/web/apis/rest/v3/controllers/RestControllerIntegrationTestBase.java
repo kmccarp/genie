@@ -679,7 +679,7 @@ abstract class RestControllerIntegrationTestBase {
 
                 if (matchedUrls.size() == 1) {
                     urisToMatch.remove(matchedUrls.get(0));
-                } else if (matchedUrls.size() == 0) {
+                } else if (matchedUrls.isEmpty()) {
                     this.mismatchDescription = "Unexpected input URL: " + inputUrl;
                     return false;
                 } else {

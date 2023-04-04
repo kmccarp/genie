@@ -37,6 +37,7 @@ import java.time.Instant;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @ToString(callSuper = true, doNotUseGetters = true)
 public class Application extends CommonResource {
+    private static final long serialVersionUID = 1;
     @Valid
     private final ApplicationMetadata metadata;
 

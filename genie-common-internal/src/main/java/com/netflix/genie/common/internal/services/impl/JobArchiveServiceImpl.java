@@ -99,7 +99,7 @@ public class JobArchiveServiceImpl implements JobArchiveService {
                     .map(fileEntry -> Paths.get(fileEntry.getPath()))
                     .map(directory::resolve)
                     .map(Path::toAbsolutePath)
-                    .filter(path -> Files.exists(path))
+                    .filter(Files::exists)
                     .map(Path::toFile)
                     .collect(Collectors.toSet())
 

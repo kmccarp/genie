@@ -52,6 +52,7 @@ import java.util.Set;
 @Entity
 @Table(name = "criteria")
 public class CriterionEntity extends IdEntity {
+    private static final long serialVersionUID = 1;
     @Basic
     @Column(name = "unique_id", updatable = false)
     @Size(max = 255, message = "The id part of the criterion can't be longer than 255 characters")

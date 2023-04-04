@@ -673,7 +673,7 @@ class JobRestControllerIntegrationTest extends RestControllerIntegrationTestBase
         // Range request -- suffix
         RestAssured
             .given(this.getRequestSpecification())
-            .header(HttpHeaders.RANGE, "bytes=" + (-2))
+            .header(HttpHeaders.RANGE, "bytes=" + -2)
             .when()
             .port(this.port)
             .get(JOBS_API + "/{id}/output/{filePath}", id, "stdout")

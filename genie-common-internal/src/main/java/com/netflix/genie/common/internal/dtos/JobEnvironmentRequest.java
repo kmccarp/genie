@@ -43,7 +43,7 @@ import java.util.Optional;
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)
 @JsonDeserialize(builder = JobEnvironmentRequest.Builder.class)
-public class JobEnvironmentRequest implements Serializable {
+public final class JobEnvironmentRequest implements Serializable {
 
     private static final long serialVersionUID = -1782447793634908168L;
 

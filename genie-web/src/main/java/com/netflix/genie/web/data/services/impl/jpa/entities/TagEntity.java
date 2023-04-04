@@ -51,6 +51,8 @@ import javax.validation.constraints.Size;
 @Table(name = "tags")
 public class TagEntity extends AuditEntity {
 
+    private static final long serialVersionUID = 1;
+
     @Basic(optional = false)
     @Column(name = "tag", nullable = false, unique = true, updatable = false)
     @NotBlank(message = "Must have a tag value associated with this entity")

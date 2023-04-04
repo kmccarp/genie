@@ -34,6 +34,8 @@ import java.util.Optional;
 @Getter
 public class JobMetadata extends BaseDTO {
 
+    private static final long serialVersionUID = 1;
+
     private final String clientHost;
     private final String userAgent;
     private final Integer numAttachments;

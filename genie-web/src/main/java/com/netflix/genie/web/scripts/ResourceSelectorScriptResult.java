@@ -37,7 +37,7 @@ import java.util.Optional;
 @ToString(doNotUseGetters = true)
 @JsonDeserialize(builder = ResourceSelectorScriptResult.Builder.class)
 @SuppressWarnings("FinalClass")
-public class ResourceSelectorScriptResult<R> {
+public final class ResourceSelectorScriptResult<R> {
     private final R resource;
     private final String rationale;
 
