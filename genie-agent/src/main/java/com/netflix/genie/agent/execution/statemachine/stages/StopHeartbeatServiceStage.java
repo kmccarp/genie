@@ -27,7 +27,7 @@ import com.netflix.genie.agent.execution.statemachine.States;
  * @since 4.0.0
  */
 public class StopHeartbeatServiceStage extends StopServiceStage {
-    private AgentHeartBeatService heartbeatService;
+    private final AgentHeartBeatService heartbeatService;
 
     /**
      * Constructor.

@@ -56,7 +56,7 @@ class CommonServicesAutoConfigurationTest {
     @Test
     void testExpectedContext() {
         this.contextRunner.run(
-            (context) -> {
+            context -> {
                 Assertions.assertThat(context).hasSingleBean(FileSystemJobArchiverImpl.class);
                 Assertions.assertThat(context).hasSingleBean(JobArchiver.class);
                 Assertions.assertThat(context).hasSingleBean(JobArchiveService.class);
@@ -86,7 +86,7 @@ class CommonServicesAutoConfigurationTest {
                 )
             )
             .run(
-                (context) -> {
+                context -> {
                     Assertions.assertThat(context).hasSingleBean(FileSystemJobArchiverImpl.class);
                     Assertions.assertThat(context).hasSingleBean(S3JobArchiverImpl.class);
                     Assertions.assertThat(context).hasSingleBean(JobArchiveService.class);
