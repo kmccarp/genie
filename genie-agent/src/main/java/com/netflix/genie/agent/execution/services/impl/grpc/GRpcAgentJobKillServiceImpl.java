@@ -115,7 +115,7 @@ public class GRpcAgentJobKillServiceImpl implements AgentJobKillService {
             final KillService killService,
             final String jobId,
             final ExponentialBackOffTrigger trigger
-        ) {
+    ) {
             this.client = client;
             this.killService = killService;
             this.jobId = jobId;

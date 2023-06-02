@@ -155,7 +155,7 @@ class DownloadServiceImpl implements DownloadService {
             public Builder addFileWithTargetDirectory(
                 final URI sourceFileUri,
                 final File targetDirectory
-            ) {
+    ) {
                 final String uriPath = sourceFileUri.getPath();
                 if (StringUtils.isBlank(uriPath)) {
                     throw new IllegalArgumentException("Uri has empty path: " + sourceFileUri);
@@ -175,7 +175,7 @@ class DownloadServiceImpl implements DownloadService {
             public Builder addFileWithTargetFile(
                 final URI sourceFileUri,
                 final File targetFile
-            ) {
+    ) {
                 filesMap.put(sourceFileUri, targetFile);
                 return this;
             }

@@ -205,7 +205,7 @@ public class Job extends CommonDTO {
             @JsonProperty(value = "name", required = true) final String name,
             @JsonProperty(value = "user", required = true) final String user,
             @JsonProperty(value = "version", required = true) final String version
-        ) {
+    ) {
             super(name, user, version);
         }
 
@@ -226,7 +226,7 @@ public class Job extends CommonDTO {
             final String user,
             final String version,
             @Nullable final String commandArgs
-        ) {
+    ) {
             super(name, user, version);
             this.bCommandArgs = StringUtils.isBlank(commandArgs) ? null : commandArgs;
         }

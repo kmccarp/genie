@@ -121,7 +121,7 @@ public class JobMetadata extends CommonMetadata {
             @JsonProperty(value = "name", required = true) final String name,
             @JsonProperty(value = "user", required = true) final String user,
             @JsonProperty(value = "version", required = true) final String version
-        ) {
+    ) {
             super(name, user, version);
         }
 

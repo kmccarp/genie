@@ -229,7 +229,7 @@ public class JobRequest extends ExecutionEnvironmentDTO {
             @JsonProperty(value = "version", required = true) final String version,
             @JsonProperty(value = "clusterCriterias", required = true) final List<ClusterCriteria> clusterCriterias,
             @JsonProperty(value = "commandCriteria", required = true) final Set<String> commandCriteria
-        ) {
+    ) {
             super(name, user, version);
             this.bClusterCriterias.addAll(clusterCriterias);
             commandCriteria.forEach(
@@ -260,7 +260,7 @@ public class JobRequest extends ExecutionEnvironmentDTO {
             @JsonProperty(value = "commandCriteria", required = true) final Set<String> commandCriteria,
             @JsonProperty(value = "commandArgs") @Nullable final String commandArgs,
             @JsonProperty(value = "commandArguments") @Nullable final List<String> commandArguments
-        ) {
+    ) {
             this(name, user, version, clusterCriterias, commandCriteria);
             if (commandArgs == null && commandArguments == null) {
                 // Neither fields are set.
@@ -296,7 +296,7 @@ public class JobRequest extends ExecutionEnvironmentDTO {
             @Nullable final String commandArgs,
             final List<ClusterCriteria> clusterCriterias,
             final Set<String> commandCriteria
-        ) {
+    ) {
             super(name, user, version);
             this.bCommandArgs = StringUtils.isBlank(commandArgs) ? null : commandArgs;
             this.bClusterCriterias.addAll(clusterCriterias);

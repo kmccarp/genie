@@ -302,7 +302,7 @@ public class FinishedJob extends CommonMetadata {
             final List<String> commandArgs,
             final Criterion commandCriterion,
             final List<Criterion> clusterCriteria
-        ) {
+    ) {
             super(name, user, version);
             this.bUniqueId = uniqueId;
             this.bCreated = created;

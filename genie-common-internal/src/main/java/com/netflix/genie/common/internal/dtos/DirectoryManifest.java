@@ -308,7 +308,7 @@ public class DirectoryManifest {
         public DirectoryManifest getDirectoryManifest(
             final Path directory,
             final boolean includeChecksum
-        ) throws IOException {
+    ) throws IOException {
             return new DirectoryManifest(directory, includeChecksum, this.filter);
         }
     }
@@ -328,7 +328,7 @@ public class DirectoryManifest {
             final ImmutableMap.Builder<String, ManifestEntry> builder,
             final boolean checksumFiles,
             final Filter filter
-        ) throws IOException {
+    ) throws IOException {
             this.root = root;
             this.builder = builder;
             this.checksumFiles = checksumFiles;
@@ -405,7 +405,7 @@ public class DirectoryManifest {
             final Path entry,
             final BasicFileAttributes attributes,
             final boolean directory
-        ) throws IOException {
+    ) throws IOException {
             final String path = this.root.relativize(entry).toString();
             final Path fileName = entry.getFileName();
             final String name = fileName == null
@@ -531,7 +531,7 @@ public class DirectoryManifest {
             @JsonProperty(value = "mimeType") @Nullable final String mimeType,
             @JsonProperty(value = "parent") @Nullable final String parent,
             @JsonProperty(value = "children", required = true) final Set<String> children
-        ) {
+    ) {
             this.path = path;
             this.name = name;
             this.lastModifiedTime = lastModifiedTime;

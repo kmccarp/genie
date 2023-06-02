@@ -233,7 +233,7 @@ class ExecCommand implements AgentCommand {
             final ArgumentDelegates.JobRequestArguments jobRequestArguments,
             final ArgumentDelegates.CleanupArguments cleanupArguments,
             final ArgumentDelegates.RuntimeConfigurationArguments runtimeConfigurationArguments
-        ) {
+    ) {
             this.serverArguments = serverArguments;
             this.cacheArguments = cacheArguments;
             this.jobRequestArguments = jobRequestArguments;

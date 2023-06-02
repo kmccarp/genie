@@ -131,7 +131,7 @@ public class CommandRequest extends CommonRequestImpl {
         public Builder(
             @JsonProperty(value = "metadata", required = true) final CommandMetadata metadata,
             @JsonProperty(value = "executable", required = true) final List<String> executable
-        ) {
+    ) {
             super();
             this.bClusterCriteria = new ArrayList<>();
             this.bMetadata = metadata;

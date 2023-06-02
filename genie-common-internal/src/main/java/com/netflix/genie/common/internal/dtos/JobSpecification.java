@@ -189,7 +189,7 @@ public class JobSpecification implements Serializable {
                 value = "executionEnvironment",
                 required = true
             ) final ExecutionEnvironment executionEnvironment
-        ) {
+    ) {
             this.id = id;
             this.executionEnvironment = executionEnvironment;
         }

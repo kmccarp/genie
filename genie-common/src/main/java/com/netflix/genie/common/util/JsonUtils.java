@@ -148,7 +148,7 @@ public final class JsonUtils {
             final Instant value,
             final JsonGenerator gen,
             final SerializerProvider serializers
-        ) throws IOException {
+    ) throws IOException {
             gen.writeString(value.truncatedTo(ChronoUnit.MILLIS).toString());
         }
     }
@@ -169,7 +169,7 @@ public final class JsonUtils {
             final Optional<Instant> value,
             final JsonGenerator gen,
             final SerializerProvider serializers
-        ) throws IOException {
+    ) throws IOException {
             if (value.isPresent()) {
                 gen.writeString(value.get().truncatedTo(ChronoUnit.MILLIS).toString());
             } else {

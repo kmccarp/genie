@@ -116,7 +116,7 @@ class DownloadCommand implements AgentCommand {
 
         DownloadCommandArguments(
             final ArgumentDelegates.CacheArguments cacheArguments
-        ) {
+    ) {
             this.cacheArguments = cacheArguments;
             this.fileUris = Lists.newArrayList();
             this.destinationDirectory = Paths.get("").toAbsolutePath().toFile();

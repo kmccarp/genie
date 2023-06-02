@@ -111,7 +111,7 @@ public interface DownloadService {
             DownloadService.Manifest.Builder addFileWithTargetDirectory(
                 URI sourceFileUri,
                 File targetDirectory
-            );
+    );
 
             /**
              * Add a source file specifying a target file destination.
@@ -123,7 +123,7 @@ public interface DownloadService {
             Builder addFileWithTargetFile(
                 URI sourceFileUri,
                 File targetFile
-            );
+    );
 
             /**
              * Build the manifest.

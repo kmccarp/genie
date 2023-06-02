@@ -140,7 +140,7 @@ public abstract class CommonMetadata implements Serializable {
             final String name,
             final String user,
             final String version
-        ) {
+    ) {
             this.bName = name;
             this.bUser = user;
             this.bVersion = version;

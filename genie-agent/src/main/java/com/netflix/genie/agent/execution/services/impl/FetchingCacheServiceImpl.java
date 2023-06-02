@@ -179,7 +179,7 @@ class FetchingCacheServiceImpl implements FetchingCacheService {
                     resourceLastModified
                 )
             )
-        ) {
+            ) {
             //Critical section begin
             lock.lock();
 
@@ -205,7 +205,7 @@ class FetchingCacheServiceImpl implements FetchingCacheService {
                 try (
                     InputStream in = resource.getInputStream();
                     OutputStream out = new FileOutputStream(cachedResourceVersionDownloadFile)
-                ) {
+                    ) {
                     FileCopyUtils.copy(in, out);
                     Files.move(cachedResourceVersionDownloadFile, cachedResourceVersionDataFile);
                 }
@@ -307,7 +307,7 @@ class FetchingCacheServiceImpl implements FetchingCacheService {
             CloseableLock lock = fileLockFactory.getLock(
                 touchCacheResourceVersionLockFile(resourceVersionDir)
             )
-        ) {
+            ) {
             //critical section begin
             lock.lock();
 

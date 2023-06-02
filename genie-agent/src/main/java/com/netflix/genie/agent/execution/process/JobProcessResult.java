@@ -74,7 +74,7 @@ public class JobProcessResult {
             final JobStatus finalStatus,
             final String finalStatusMessage,
             final int exitCode
-        ) throws IllegalArgumentException {
+    ) throws IllegalArgumentException {
             if (!finalStatus.isFinished()) {
                 throw new IllegalArgumentException(
                     "finalStatus must be one of the final states: "

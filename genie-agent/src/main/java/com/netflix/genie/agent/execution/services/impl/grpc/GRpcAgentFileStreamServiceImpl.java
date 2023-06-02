@@ -364,7 +364,7 @@ public class GRpcAgentFileStreamServiceImpl implements AgentFileStreamService {
             final long startOffset,
             final long endOffset,
             final long maxChunkSize
-        ) {
+    ) {
             this.gRpcAgentFileStreamService = gRpcAgentFileStreamService;
             this.streamId = streamId;
             this.absolutePath = absolutePath;

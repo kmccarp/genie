@@ -97,7 +97,7 @@ public interface ApiJobRequest extends CommonRequest {
         public Builder(
             @JsonProperty(value = "metadata", required = true) final JobMetadata metadata,
             @JsonProperty(value = "criteria", required = true) final ExecutionResourceCriteria criteria
-        ) {
+    ) {
             super();
             this.bMetadata = metadata;
             this.bCriteria = criteria;
@@ -126,7 +126,7 @@ public interface ApiJobRequest extends CommonRequest {
          */
         public Builder withRequestedAgentEnvironment(
             @Nullable final JobEnvironmentRequest requestedJobEnvironment
-        ) {
+    ) {
             this.bRequestedJobEnvironment = requestedJobEnvironment;
             return this;
         }

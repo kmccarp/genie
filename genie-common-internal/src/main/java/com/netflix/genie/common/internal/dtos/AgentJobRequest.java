@@ -94,7 +94,7 @@ public interface AgentJobRequest extends CommonRequest {
                 value = "requestedAgentConfig",
                 required = true
             ) final AgentConfigRequest requestedAgentConfig
-        ) {
+    ) {
             super();
             this.bMetadata = metadata;
             this.bCriteria = criteria;

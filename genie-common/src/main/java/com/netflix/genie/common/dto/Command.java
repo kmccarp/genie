@@ -151,7 +151,7 @@ public class Command extends ExecutionEnvironmentDTO {
             final CommandStatus status,
             final String executable,
             final long ignoredCheckDelay
-        ) {
+    ) {
             super(name, user, version);
             this.bStatus = status;
             this.bExecutable = executable;
@@ -176,7 +176,7 @@ public class Command extends ExecutionEnvironmentDTO {
             final CommandStatus status,
             final List<String> executableAndArguments,
             final long ignoredCheckDelay
-        ) {
+    ) {
             super(name, user, version);
             this.bStatus = status;
             this.bExecutableAndArguments.addAll(executableAndArguments);
@@ -197,7 +197,7 @@ public class Command extends ExecutionEnvironmentDTO {
             final String version,
             final CommandStatus status,
             final List<String> executableAndArguments
-        ) {
+    ) {
             super(name, user, version);
             this.bStatus = status;
             this.bExecutableAndArguments.addAll(executableAndArguments);
@@ -213,7 +213,7 @@ public class Command extends ExecutionEnvironmentDTO {
             @JsonProperty(value = "user", required = true) final String user,
             @JsonProperty(value = "version", required = true) final String version,
             @JsonProperty(value = "status", required = true) final CommandStatus status
-        ) {
+    ) {
             super(name, user, version);
             this.bStatus = status;
         }

@@ -184,7 +184,7 @@ class JobSetupServiceImpl implements JobSetupService {
                     StandardOpenOption.SYNC,
                     StandardOpenOption.DSYNC
                 )
-            ) {
+                ) {
                 fileWriter.write(
                     new JobScriptComposer(jobSpecification, jobDirectory)
                         .composeScript(this.jobSetupProperties)
@@ -228,10 +228,10 @@ class JobSetupServiceImpl implements JobSetupService {
             case DEPENDENCIES_CLEANUP:
                 final RegexRuleSet cleanupWhitelist = RegexRuleSet.buildWhitelist(
                     Lists.newArrayList(
-                            PathUtils.jobClusterDirectoryPath(jobDirectoryPath.toFile(), ".*"),
-                            PathUtils.jobCommandDirectoryPath(jobDirectoryPath.toFile(), ".*"),
-                            PathUtils.jobApplicationDirectoryPath(jobDirectoryPath.toFile(), ".*")
-                        )
+                        PathUtils.jobClusterDirectoryPath(jobDirectoryPath.toFile(), ".*"),
+                        PathUtils.jobCommandDirectoryPath(jobDirectoryPath.toFile(), ".*"),
+                        PathUtils.jobApplicationDirectoryPath(jobDirectoryPath.toFile(), ".*")
+                    )
                         .stream()
                         .map(PathUtils::jobEntityDependenciesPath)
                         .map(Path::toString)
@@ -400,7 +400,7 @@ class JobSetupServiceImpl implements JobSetupService {
         JobScriptComposer(
             final JobSpecification jobSpecification,
             final File jobDirectory
-        ) {
+    ) {
 
             this.jobId = jobSpecification.getJob().getId();
 

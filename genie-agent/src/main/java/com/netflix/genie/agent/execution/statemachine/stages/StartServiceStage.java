@@ -47,7 +47,8 @@ abstract class StartServiceStage extends ExecutionStage {
         final ExecutionContext executionContext
     ) throws RetryableJobExecutionException, FatalJobExecutionException {
 
-        @NotBlank final String claimedJobId = executionContext.getClaimedJobId();
+        @NotBlank
+        final String claimedJobId = executionContext.getClaimedJobId();
         assert StringUtils.isNotBlank(claimedJobId);
 
         try {

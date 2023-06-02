@@ -170,7 +170,7 @@ class ResolveJobSpecCommand implements AgentCommand {
         ResolveJobSpecCommandArguments(
             final ArgumentDelegates.ServerArguments serverArguments,
             final ArgumentDelegates.JobRequestArguments jobRequestArguments
-        ) {
+    ) {
             this.serverArguments = serverArguments;
             this.jobRequestArguments = jobRequestArguments;
         }

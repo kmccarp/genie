@@ -32,19 +32,22 @@ public interface AgentMetadata {
      *
      * @return a version string or a fallback
      */
-    @NotBlank String getAgentVersion();
+    @NotBlank
+    String getAgentVersion();
 
     /**
      * Get the name of the host the agent is running on.
      *
      * @return a hostname or a fallback string
      */
-    @NotBlank String getAgentHostName();
+    @NotBlank
+    String getAgentHostName();
 
     /**
      * Get the agent process ID.
      *
      * @return the agent process ID or a fallback string
      */
-    @NotBlank String getAgentPid();
+    @NotBlank
+    String getAgentPid();
 }

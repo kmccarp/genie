@@ -101,7 +101,7 @@ public class ConsoleLogListener implements JobExecutionListener {
                 log.info("Shutting down...");
                 break;
             default:
-                // NOOP - Other states are TMI for Console
+            // NOOP - Other states are TMI for Console
         }
     }
 

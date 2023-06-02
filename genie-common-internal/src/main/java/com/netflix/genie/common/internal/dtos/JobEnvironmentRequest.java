@@ -131,7 +131,7 @@ public class JobEnvironmentRequest implements Serializable {
          */
         public Builder withRequestedEnvironmentVariables(
             @Nullable final Map<String, String> requestedEnvironmentVariables
-        ) {
+    ) {
             this.bRequestedEnvironmentVariables.clear();
             if (requestedEnvironmentVariables != null) {
                 this.bRequestedEnvironmentVariables.putAll(requestedEnvironmentVariables);

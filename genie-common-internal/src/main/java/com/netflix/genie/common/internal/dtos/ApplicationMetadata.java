@@ -88,7 +88,7 @@ public class ApplicationMetadata extends CommonMetadata {
             @JsonProperty(value = "user", required = true) final String user,
             @JsonProperty(value = "version", required = true) final String version,
             @JsonProperty(value = "status", required = true) final ApplicationStatus status
-        ) {
+    ) {
             super(name, user, version);
             this.bStatus = status;
         }
