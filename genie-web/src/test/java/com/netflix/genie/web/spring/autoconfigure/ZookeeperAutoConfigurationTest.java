@@ -38,13 +38,13 @@ import org.springframework.integration.zookeeper.config.LeaderInitiatorFactoryBe
  */
 class ZookeeperAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    ZookeeperAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    ZookeeperAutoConfiguration.class
+                            )
+                    );
 
     /**
      * Test expected beans when Zookeeper is not enabled.

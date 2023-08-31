@@ -31,13 +31,13 @@ import org.springframework.retry.annotation.RetryConfiguration;
  */
 class RetryAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    RetryAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    RetryAutoConfiguration.class
+                            )
+                    );
 
     /**
      * The auto configuration creates the expected beans.

@@ -121,7 +121,7 @@ class ManagedScriptIntegrationTest {
         this.scriptProperties.setTimeout(1);
 
         Assertions
-            .assertThatThrownBy(() -> this.script.evaluate())
+            .assertThatThrownBy(this.script::evaluate)
             .isInstanceOf(ScriptExecutionException.class)
             .hasCauseInstanceOf(TimeoutException.class);
     }
@@ -129,7 +129,7 @@ class ManagedScriptIntegrationTest {
     @Test
     void evaluateScriptNotLoadedTest() {
         Assertions
-            .assertThatThrownBy(() -> this.script.evaluate())
+            .assertThatThrownBy(this.script::evaluate)
             .isInstanceOf(ScriptNotConfiguredException.class);
     }
 

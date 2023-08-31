@@ -45,14 +45,14 @@ import java.io.File;
 
 class ServicesAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    ServicesAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(ServicesAutoConfigurationTest.MocksConfiguration.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    ServicesAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(ServicesAutoConfigurationTest.MocksConfiguration.class);
 
     @Test
     void executionContext() {

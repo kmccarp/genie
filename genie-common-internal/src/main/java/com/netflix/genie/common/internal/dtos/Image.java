@@ -34,7 +34,7 @@ import java.util.Optional;
  * @since 4.3.0
  */
 @JsonDeserialize(builder = Image.Builder.class)
-public class Image implements Serializable {
+public final class Image implements Serializable {
 
     private final String name;
     private final String tag;

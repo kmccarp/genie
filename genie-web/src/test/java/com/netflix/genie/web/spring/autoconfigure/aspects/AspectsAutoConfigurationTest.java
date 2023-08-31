@@ -39,14 +39,14 @@ import org.springframework.context.annotation.Configuration;
  */
 class AspectsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    AspectsAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(UserConfig.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    AspectsAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(UserConfig.class);
 
     /**
      * Make sure all the expected beans are created by the auto configuration.

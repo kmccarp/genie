@@ -37,7 +37,7 @@ import javax.validation.Valid;
 @ToString(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = ClusterRequest.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class ClusterRequest extends CommonRequestImpl {
+public final class ClusterRequest extends CommonRequestImpl {
 
     @Valid
     private final ClusterMetadata metadata;

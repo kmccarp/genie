@@ -54,14 +54,14 @@ import org.springframework.scheduling.TaskScheduler;
  */
 class AgentServicesAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    AgentServicesAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(RequiredBeans.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    AgentServicesAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(RequiredBeans.class);
 
     /**
      * Verify beans in case Zookeeper is not enabled.

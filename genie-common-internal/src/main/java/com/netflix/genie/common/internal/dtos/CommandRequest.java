@@ -48,7 +48,7 @@ import java.util.stream.Collectors;
 @ToString(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = CommandRequest.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class CommandRequest extends CommonRequestImpl {
+public final class CommandRequest extends CommonRequestImpl {
 
     @Valid
     private final CommandMetadata metadata;
