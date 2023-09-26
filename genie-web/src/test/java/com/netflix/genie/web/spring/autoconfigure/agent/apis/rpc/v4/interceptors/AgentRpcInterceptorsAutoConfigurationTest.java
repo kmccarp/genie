@@ -34,13 +34,13 @@ import org.springframework.context.annotation.Configuration;
  */
 class AgentRpcInterceptorsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    AgentRpcInterceptorsAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    AgentRpcInterceptorsAutoConfiguration.class
+                            )
+                    );
 
     /**
      * Default beans created.

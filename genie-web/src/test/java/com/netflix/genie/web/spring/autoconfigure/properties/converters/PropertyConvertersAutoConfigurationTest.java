@@ -30,13 +30,13 @@ import org.springframework.boot.test.context.runner.ApplicationContextRunner;
  * @since 4.0.0
  */
 class PropertyConvertersAutoConfigurationTest {
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    PropertyConvertersAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    PropertyConvertersAutoConfiguration.class
+                            )
+                    );
 
     /**
      * Make sure the expected converters are created.

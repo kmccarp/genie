@@ -33,14 +33,14 @@ import org.springframework.cache.caffeine.CaffeineCacheManager;
  */
 class CachingAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    CacheAutoConfiguration.class,
-                    CachingAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    CacheAutoConfiguration.class,
+                                    CachingAutoConfiguration.class
+                            )
+                    );
 
     /**
      * The auto configuration creates the expected beans.

@@ -98,7 +98,7 @@ public class S3AttachmentServiceImpl implements AttachmentService {
 
         log.debug("Saving {} attachments for job request with id: {}", attachments.size(), jobId);
 
-        if (attachments.size() == 0) {
+        if (attachments.isEmpty()) {
             return EMPTY_SET;
         }
 

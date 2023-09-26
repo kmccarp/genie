@@ -106,7 +106,7 @@ final class ArgumentValidators {
             }
 
             // If it's a file, make sure it exists, it's a file, it's readable, etc.
-            if (uri.getScheme().equals("file")) {
+            if ("file".equals(uri.getScheme())) {
                 final Path path = Paths.get(uri.getPath());
 
                 if (!Files.exists(path)) {

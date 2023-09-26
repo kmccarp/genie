@@ -41,7 +41,7 @@ import java.util.Optional;
 @EqualsAndHashCode(callSuper = true, doNotUseGetters = true)
 @JsonDeserialize(builder = JobMetadata.Builder.class)
 @SuppressWarnings("checkstyle:finalclass")
-public class JobMetadata extends CommonMetadata {
+public final class JobMetadata extends CommonMetadata {
     static final String DEFAULT_VERSION = "0.1";
 
     @Size(max = 255, message = "Max length of the group is 255 characters")

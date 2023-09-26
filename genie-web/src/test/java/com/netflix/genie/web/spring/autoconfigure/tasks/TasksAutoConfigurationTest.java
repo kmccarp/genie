@@ -33,13 +33,13 @@ import org.springframework.boot.test.context.runner.ApplicationContextRunner;
  */
 class TasksAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    TasksAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    TasksAutoConfiguration.class
+                            )
+                    );
 
     /**
      * All the expected beans exist.

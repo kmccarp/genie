@@ -32,7 +32,7 @@ import lombok.ToString;
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)
 @SuppressWarnings("FinalClass")
-public class JobProcessResult {
+public final class JobProcessResult {
 
     private final JobStatus finalStatus;
     private final String finalStatusMessage;

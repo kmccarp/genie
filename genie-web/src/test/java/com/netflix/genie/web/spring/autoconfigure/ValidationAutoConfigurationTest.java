@@ -34,13 +34,13 @@ import javax.validation.Validator;
  */
 public class ValidationAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    ValidationAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    ValidationAutoConfiguration.class
+                            )
+                    );
 
     /**
      * The auto configuration creates the expected beans.

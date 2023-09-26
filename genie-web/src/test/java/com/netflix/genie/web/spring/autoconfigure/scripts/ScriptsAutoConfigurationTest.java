@@ -44,14 +44,14 @@ import org.springframework.scheduling.TaskScheduler;
  */
 class ScriptsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withUserConfiguration(MocksConfiguration.class)
-            .withConfiguration(
-                AutoConfigurations.of(
-                    ScriptsAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withUserConfiguration(MocksConfiguration.class)
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    ScriptsAutoConfiguration.class
+                            )
+                    );
 
     @Test
     void scriptsNotCreatedByDefault() {

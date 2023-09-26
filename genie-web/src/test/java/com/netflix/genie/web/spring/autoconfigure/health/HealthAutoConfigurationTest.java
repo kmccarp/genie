@@ -35,14 +35,14 @@ import org.springframework.context.annotation.Bean;
  */
 class HealthAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    HealthAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(UserConfiguration.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    HealthAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(UserConfiguration.class);
 
     /**
      * Make sure expected beans are provided for health indicators.

@@ -48,14 +48,14 @@ import org.springframework.core.Ordered;
  */
 class SelectorsAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    SelectorsAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(RegistryConfig.class, AgentLaunchersConfig.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    SelectorsAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(RegistryConfig.class, AgentLaunchersConfig.class);
 
     @Test
     void canCreateDefaultBeans() {

@@ -39,13 +39,13 @@ class IntrospectionAutoConfigurationTest {
 
     private static final int EXPECTED_SERVER_PORT = 2482;
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    IntrospectionAutoConfiguration.class
-                )
-            );
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    IntrospectionAutoConfiguration.class
+                            )
+                    );
 
     /**
      * Make sure when the gRPC server starts as expected the bean is created.

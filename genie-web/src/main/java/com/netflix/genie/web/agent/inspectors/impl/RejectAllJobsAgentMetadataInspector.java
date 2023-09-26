@@ -34,7 +34,7 @@ import javax.validation.Valid;
  */
 public class RejectAllJobsAgentMetadataInspector implements AgentMetadataInspector {
     private static final String JOB_SUBMISSION_IS_ENABLED_MESSAGE = "Job submission is enabled";
-    private Environment environment;
+    private final Environment environment;
 
     /**
      * Constructor.

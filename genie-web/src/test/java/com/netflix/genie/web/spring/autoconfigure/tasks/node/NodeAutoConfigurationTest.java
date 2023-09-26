@@ -42,14 +42,14 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
  */
 class NodeAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    NodeAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(MockBeanConfig.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    NodeAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(MockBeanConfig.class);
 
     /**
      * All the expected beans exist.

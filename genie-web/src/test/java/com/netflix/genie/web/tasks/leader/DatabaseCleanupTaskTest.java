@@ -272,7 +272,7 @@ class DatabaseCleanupTaskTest {
             )
             .thenThrow(new RuntimeException("test"));
 
-        Assertions.assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> this.task.run());
+        Assertions.assertThatExceptionOfType(RuntimeException.class).isThrownBy(this.task::run);
     }
 
     /**

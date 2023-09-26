@@ -57,15 +57,15 @@ import org.springframework.web.client.RestTemplate;
  */
 class LeaderAutoConfigurationTest {
 
-    private ApplicationContextRunner contextRunner =
-        new ApplicationContextRunner()
-            .withConfiguration(
-                AutoConfigurations.of(
-                    TasksAutoConfiguration.class,
-                    LeaderAutoConfiguration.class
-                )
-            )
-            .withUserConfiguration(MockBeanConfig.class);
+    private final ApplicationContextRunner contextRunner =
+            new ApplicationContextRunner()
+                    .withConfiguration(
+                            AutoConfigurations.of(
+                                    TasksAutoConfiguration.class,
+                                    LeaderAutoConfiguration.class
+                            )
+                    )
+                    .withUserConfiguration(MockBeanConfig.class);
 
     /**
      * All the expected default beans exist.

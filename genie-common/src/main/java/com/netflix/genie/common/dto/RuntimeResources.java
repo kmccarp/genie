@@ -32,7 +32,7 @@ import java.util.Optional;
  * @since 4.3.0
  */
 @JsonDeserialize(builder = RuntimeResources.Builder.class)
-public class RuntimeResources implements Serializable {
+public final class RuntimeResources implements Serializable {
 
     @Min(value = 1, message = "Must have at least one CPU")
     private final Integer cpu;
